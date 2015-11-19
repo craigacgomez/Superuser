@@ -27,10 +27,10 @@ android {
 
     signingConfigs {
         release {
-	        storeFile file(System.getenv("KEYSTORE"))
-            storePassword new String(System.console().readPassword("\n\$ Enter store password: "))
+            storeFile file("su.keystore")
+            storePassword "superuser"
             keyAlias "su"
-            keyPassword new String(System.console().readPassword("\n\$ Enter key password: "))
+            keyPassword "superuser"
         }
     }
 
